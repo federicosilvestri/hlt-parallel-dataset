@@ -10,6 +10,6 @@ def serialize_json(dataset: tp.Dict[str, tp.Dict[str, str]], file_path: Path) ->
     :param file_path: the path where store the file
     :return: None
     """
-    json_object = json.dumps(dataset, indent=4)
-    with open(file_path, 'w') as fp:
+    json_object = json.dumps(dataset, indent=4, ensure_ascii=False)
+    with open(file_path, 'w', encoding="utf-8") as fp:
         fp.write(json_object)

@@ -12,13 +12,13 @@ def _load_single_dataset(file_path: Path):
     """
     # read the TSV file line per line. Each line is a couple (str, str), encoded with "[str]\tab[str]"
     dataset: tp.List[tp.Tuple[str, str]] = []
-    with open(file_path, newline='\n') as fp:
+    with open(file_path, newline='\n', encoding="utf-8") as fp:
         # iterate all lines
         for line in fp:
             # remove the trailing \n
             line = line.replace("\n", "")
             # split using tab delimiter
-            data = line.split(sep='\t', maxsplit=1)
+            data = line.split(sep='\t')
             # append into dataset
             dataset.append((data[0], data[1]))
 
