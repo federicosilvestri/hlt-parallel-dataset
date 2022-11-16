@@ -1,8 +1,4 @@
 {
     "size": 302870,
-    "couple_size": 1211480,
-    "parallelization_missing_records": 0,
-    "parallelization_perc": 100.0,
-    "total_tokens": 4927342,
-    "avg_tokens_per_sentence": 16.268834813616404
+    "num_sentences": 1514350
 }
